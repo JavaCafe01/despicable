@@ -1,0 +1,9 @@
+deps
+luvit
+luvi
+lit
+config.json
+gateway.json
+discordia.log
+luna.db
+temp.*
