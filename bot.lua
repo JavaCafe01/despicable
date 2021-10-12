@@ -3,7 +3,7 @@ local json = require('json')
 local discordia = require('discordia')
 local client = discordia.Client()
 
-local cfg = json.decode(fs.readFileSync('config.json'))
+require "secrets"
 
 client:on('ready', function()
 	print('Logged in as '.. client.user.username)
@@ -15,4 +15,4 @@ client:on('messageCreate', function(message)
 	end
 end)
 
-client:run("Bot " .. cfg.token)
+client:run("Bot " .. BOT_TOKEN)
