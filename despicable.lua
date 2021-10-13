@@ -15,7 +15,11 @@ despicable:on('messageCreate', function(self)
 		self.channel:send('https://awesomewm.org/doc/api/')
 	end
 
+<<<<<<< HEAD
 	if self.content == prefix .. 'docs master' then
+=======
+	if self.content == prefix .. 'master' then
+>>>>>>> 44d77bbc1e5d8df57aa53cf15a79e9e3a7561a08
 		self.channel:send('https://awesomewm.org/apidoc/')
 	end
 
