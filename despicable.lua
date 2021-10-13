@@ -4,7 +4,6 @@ local config = require('config')
 
 local prefix = config.PREFIX
 local logs = ''
-local token = config.BOT_TOKEN
 
 despicable:on('ready', function()
 	print('Logged in as '.. despicable.user.username)
@@ -77,4 +76,4 @@ despicable:on('messageDelete', function(self)
 	}
 end)
 
-despicable:run("Bot " .. token)
+despicable:run("Bot " .. config.BOT_TOKEN)
