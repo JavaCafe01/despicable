@@ -3,6 +3,7 @@ local despicable = discordia.Client()
 
 local prefix = ''
 local logs = ''
+local token = ''
 
 despicable:on('ready', function()
 	print('Logged in as '.. despicable.user.username)
@@ -74,4 +75,4 @@ despicable:on('messageDelete', function(self)
 	}
 end)
 
-despicable:run("Bot " .. BOT_TOKEN)
+despicable:run("Bot " .. token)
