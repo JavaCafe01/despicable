@@ -1,7 +1,7 @@
 local discordia = require('discordia')
 local despicable = discordia.Client()
 
-local prefix = ''
+local prefix = '!'
 local logs = ''
 local token = ''
 
@@ -11,12 +11,12 @@ end)
 
 -- link awesome documentation
 despicable:on('messageCreate', function(self)
-	if self.content == prefix .. 'stable' then
+	if self.content == prefix .. 'docs stable' then
 		self.channel:send('https://awesomewm.org/doc/api/')
 	end
 
-	if self.content == prefix .. 'master' then
-		self.channel.send('https://awesomewm.org/apidoc/')
+	if self.content == prefix .. 'docs master' then
+		self.channel:send('https://awesomewm.org/apidoc/')
 	end
 
 end)
@@ -26,29 +26,32 @@ despicable:on('messageCreate', function(self)
 	if self.content == prefix .. 'man' then
 		self.channel:send {
 			embed = {
-				title = 'man despicable';
+				title = '';
 				color = 0x3498db;
-				description = 'Manual for our Awesome bot, all commands are prefixed with `' ..prefix.. '`';
-				fields = {
+				description = 'This is our bot for the AwesomeWM discord server. All commands are prefixed with `' ..prefix.. '`.';
+				author = {
+					name = despicable.user.username,
+					icon_url = despicable.user.avatarURL
+				},
+                fields = {
 					{
-						name = 'stable',
-						value = 'link stable API docs',
+						name = 'docs stable',
+						value = 'A link to AwesomeWM\'s stable API docs',
 						inline = false
 					},
 					{
-						name = 'master',
-						value = 'link master API docs',
+						name = 'docs master',
+						value = 'A link to AwesomeWM\'s master API docs',
 						inline = false
 					},
 					{
 						name = 'man',
-						value = 'Manual for this bot',
+						value = 'Commands manual for this bot',
 						inline = false
 					},
 				},
 				footer = {
-					text = self.guild.name,
-					icon_url = self.guild.iconURL
+					text = self.guild.name
 				},
 				timestamp = discordia.Date():toISO('T', 'Z')
 			}

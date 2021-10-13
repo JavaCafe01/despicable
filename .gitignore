@@ -6,3 +6,4 @@ gateway.json
 discordia.log
 luna.db
 temp.*
+config.lua
