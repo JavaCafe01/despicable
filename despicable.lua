@@ -16,7 +16,7 @@ despicable:on('messageCreate', function(self)
 	end
 
 	if self.content == prefix .. 'master' then
-		self.channel.send('https://awesomewm.org/apidoc/')
+		self.channel:send('https://awesomewm.org/apidoc/')
 	end
 
 end)
