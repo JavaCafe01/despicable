@@ -2,6 +2,7 @@ deps
 luvit
 luvi
 lit
+secrets.lua
 gateway.json
 discordia.log
 luna.db
