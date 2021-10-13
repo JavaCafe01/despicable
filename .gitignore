@@ -1,9 +1,9 @@
-deps
-luvit
-luvi
-lit
-gateway.json
+# Installed deps
+deps/*
+
+# Discordia
 discordia.log
-luna.db
-temp.*
+gateway.json
+
+# Config
 config.lua
