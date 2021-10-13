@@ -1,9 +1,10 @@
 local discordia = require('discordia')
 local despicable = discordia.Client()
+local config = require('config')
 
-local prefix = '!'
+local prefix = config.PREFIX
 local logs = ''
-local token = ''
+local token = config.BOT_TOKEN
 
 despicable:on('ready', function()
 	print('Logged in as '.. despicable.user.username)
@@ -14,15 +15,9 @@ despicable:on('messageCreate', function(self)
 	if self.content == prefix .. 'docs stable' then
 		self.channel:send('https://awesomewm.org/doc/api/')
 	end
-
-<<<<<<< HEAD
 	if self.content == prefix .. 'docs master' then
-=======
-	if self.content == prefix .. 'master' then
->>>>>>> 44d77bbc1e5d8df57aa53cf15a79e9e3a7561a08
 		self.channel:send('https://awesomewm.org/apidoc/')
 	end
-
 end)
 
 -- show user manual
