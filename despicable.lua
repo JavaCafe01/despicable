@@ -1,6 +1,6 @@
-local discordia = require 'discordia'
+local discordia = require('discordia')
 local despicable = discordia.Client()
-local config = require '../config'
+local config = require('config')
 
 local prefix = config.PREFIX
 local logs = ''
