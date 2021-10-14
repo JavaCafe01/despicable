@@ -1,4 +1,5 @@
 # despicable
+Discord bot for the AwesomeWM server.
 
-# Set-Up
+## Set-Up
 Coming soon.
